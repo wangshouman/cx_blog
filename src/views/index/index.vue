@@ -24,7 +24,7 @@
             <img src="../../assets/eye.svg" alt="">
             <span class="marginL2">浏览次数: 10000</span>
           </div>
-          <div class="author_item marginL10">
+          <div class="author_item marginL10"> 
             <img src="../../assets/message.svg" alt="">
             <span class="marginL2">评论</span>
           </div>
@@ -46,6 +46,9 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       articleList: [{id: 0}, {id: 1}, {id: 3}, {id: 4},] 
     }
+  },
+  methods: {
+    
   }
 }
 </script>
