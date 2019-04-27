@@ -10,31 +10,31 @@ import myself from '@/views/myself/myself'
 
 Vue.use(Router)
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/detail',
-      name: 'detail',
-      component: detail
-    },
-    {
-      path: '/technical',
-      name: 'technical',
-      component: technical
-    },
-    {
-      path: '/talk',
-      name: 'talk',
-      component: talk
-    },
-    {
-      path: '/myself',
-      name: 'myself',
-      component: myself
-    }
-  ]
+    mode: 'history',
+    routes: [{
+            path: '/',
+            name: 'index',
+            component: index
+        },
+        {
+            path: '/detail',
+            name: 'detail',
+            component: detail
+        },
+        {
+            path: '/technical',
+            name: 'technical',
+            component: technical
+        },
+        {
+            path: '/talk',
+            name: 'talk',
+            component: talk
+        },
+        {
+            path: '/myself',
+            name: 'myself',
+            component: myself
+        }
+    ]
 })
