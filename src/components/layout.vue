@@ -10,11 +10,11 @@
                     </div>
                     <div class="nav">
                     <div class="nav_item">
-                        <span @click="jumpDetail(type='index')" class="nav_content">首页</span>
-                        <span @click="jumpDetail(type='detail')" class="nav_content">详情</span>
-                        <span @click="jumpDetail(type='technical')" class="nav_content">技术杂谈</span>
-                        <span @click="jumpDetail(type='talk')" class="nav_content">技术交流</span>
-                        <span @click="jumpDetail(type='myself')" class="nav_content">关于自己</span>
+                        <span @click="jumpDetail(type='index')" :class="color == 'index'?'bgColor': ''">首页</span>
+                        <span @click="jumpDetail(type='detail')" :class="color == 'detail'?'bgColor': ''">资讯</span>
+                        <span @click="jumpDetail(type='technical')" :class="color == 'technical'?'bgColor': ''">技术杂谈</span>
+                        <span @click="jumpDetail(type='talk')" :class="color == 'talk'?'bgColor': ''">技术交流</span>
+                        <span @click="jumpDetail(type='myself')" :class="color == 'myself'?'bgColor': ''">关于自己</span>
                     </div>
                 </div>
             </div>
@@ -34,10 +34,36 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '程序员的自我修养'
+      msg: '程序员的自我修养',
+      color: '111'
     }
   },
+  mounted(){
+    this.setNavBgColor()
+  },
   methods: {
+    setNavBgColor() {
+      const self = this;
+      const name = self.$route.name
+      console.log("$", name)
+      switch (name) {
+        case 'index':
+          self.color = 'index';
+          return
+        case 'detail':
+          self.color = 'detail';
+          return
+        case 'technical':
+          self.color = 'technical';
+          return 
+        case 'talk':
+          self.color = 'talk';
+          return
+        case 'myself':
+          self.color = 'myself';
+          return
+      }
+    },
     jumpDetail(type) {
         if (type == 'index') {
             this.$router.push({path: '/'})
@@ -50,6 +76,7 @@ export default {
         } else if (type == 'myself') {
             this.$router.push('/myself')
         }
+        this.setNavBgColor()
     }
   }
 }
@@ -100,13 +127,16 @@ export default {
 .nav_item span {
     width: 100px;
 }
+.bgColor {
+  background-color: rgb(174, 212, 112);
+}
 .nav_item span:hover {
     cursor: pointer;
     background-color: rgb(174, 212, 112);
 }
 .container {
     /* position: relative; */
-    height: 92%;
+    height: 100%;
 }
 .route-content-item {
     height: 100%;
