@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/views/index/index'
@@ -5,6 +6,7 @@ import detail from '@/views/detail/detail'
 import technical from '@/views/technical/technical'
 import talk from '@/views/talk/talk'
 import myself from '@/views/myself/myself'
+import author from '@/views/author/author'
 
 // import detail from '@/views/detail'
 
@@ -14,7 +16,10 @@ export default new Router({
     routes: [{
             path: '/',
             name: 'index',
-            component: index
+            components: {
+                default:index,
+                'author': author
+                }
         },
         {
             path: '/detail',
@@ -35,6 +40,12 @@ export default new Router({
             path: '/myself',
             name: 'myself',
             component: myself
+        },
+        {
+            path: '/author',
+            name: 'author',
+            component: author
         }
     ]
 })
+

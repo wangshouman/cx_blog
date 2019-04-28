@@ -1,12 +1,15 @@
 <template>
   <div class="container">
-      这是详情页
+      <div>这是详情页</div>
+      <div>这是详情页</div>
+      <div>这是详情页</div>
+      <div>这是详情页</div>
   </div>
 
   
 </template>
 
-<script>
+<script>``
 export default {
   name: 'HelloWorld',
   data () {

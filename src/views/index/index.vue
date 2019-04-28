@@ -11,7 +11,7 @@
 后来请教了一位大佬怎么解决文件名乱码的问题，他说这个需要正面解决吗？不需要，把文件名全部改掉，文件名永远不要用中文，永远不要。
 我想他这么说的话，一定也是...</p>
         </div>
-        <div class="author   fontSize12">
+        <div class="author fontSize12">
           <div class="author_item marginL10">
             <img src="../../assets/user.svg" alt="">
             <span class="marginL2">崔庆才</span>
@@ -33,9 +33,15 @@
             <span class="marginL2">喜欢</span>
           </div>
         </div>
-      </div> 
-  </div>
+      </div>
+      <el-pagination
+        class="margin15"
+        background
+        layout="prev, pager, next"
+        :total="1000">
+      </el-pagination>
 
+  </div>
 </template> 
 
 <script>
@@ -44,7 +50,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      articleList: [{id: 0}, {id: 1}, {id: 3}, {id: 4},] 
+      articleList: [{id: 0}, {id: 1}, {id: 2}, {id: 3}] 
     }
   },
   methods: {
@@ -56,19 +62,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
-  width: 100%;
-  height: 100%;
-  background-color: #eee;
+  /* width: 100%;
+  height: 100%; */
   overflow: hidden;
+  display: inline-block;
 }
 .content {
+  display: inline-block;
   margin-top: 10px;
-  margin-right: 25%;
-  margin-left: 25%;
-  width: scan(100%-100px);
+  margin-left: 15%;
+  width: 700px;
   border-radius: 3px;
-  background-color: #fff;
   overflow: hidden;
+  background-color: #FFFFFF;
   -moz-box-shadow:2px 2px 5px #333333; 
   -webkit-box-shadow:2px 2px 5px #333333; 
   box-shadow:2px 2px 5px #333333;
@@ -87,7 +93,6 @@ export default {
   justify-content: space-between;
   margin-right: 10px;
   margin-left: 10px;
-
 }
 .content_item img {
   -moz-border-radius: 3px;
@@ -132,6 +137,13 @@ export default {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+.container .content:nth-last-child(1) {
+  margin-bottom: 15px;
+}
+.margin15 {
+  margin-left: 14%;
+  margin-top: 15px;
 }
 
 </style>

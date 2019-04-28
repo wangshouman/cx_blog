@@ -1,41 +1,23 @@
 <template>
-    <div class="container">
+    <div class="height100">
         <h2>
-            <div class="header">
-                <div>
-                    <div class="blog_name"><span>Morning city</span></div>
-                    <div class="instroduce">
-                        <span v-for="item in msg" :key="item.id" class="li-item"> {{ item }} </span>
-                    </div>
-                    </div>
-                    <div class="nav">
-                    <div class="nav_item">
-                        <span @click="jumpDetail(type='index')" :class="color == 'index'?'bgColor': ''">首页</span>
-                        <span @click="jumpDetail(type='detail')" :class="color == 'detail'?'bgColor': ''">资讯</span>
-                        <span @click="jumpDetail(type='technical')" :class="color == 'technical'?'bgColor': ''">技术杂谈</span>
-                        <span @click="jumpDetail(type='talk')" :class="color == 'talk'?'bgColor': ''">技术交流</span>
-                        <span @click="jumpDetail(type='myself')" :class="color == 'myself'?'bgColor': ''">关于自己</span>
-                    </div>
-                </div>
-            </div>
+          <router-view name="author" class="posR"></router-view>
         </h2>
-        <h2 class="container">
-            <div class="route-content-item">
-                <keep-alive>
-                    <router-view></router-view>
-                </keep-alive>
-            </div>
+        <h2 class="over">
+            <!-- <div class="route-content-item">  
+                  <router-view></router-view>
+            </div> -->
         </h2>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'layout',
   data () {
     return {
       msg: '程序员的自我修养',
-      color: '111'
+      color: ''
     }
   },
   mounted(){
@@ -102,6 +84,9 @@ export default {
 .instroduce {
   display: inline-block;
 }
+.index-item {
+  overflow-y: hidden;
+}
 .instroduce > span:hover {
   transform: translateY(-10px) rotate(10deg) scale(2);
 }
@@ -118,9 +103,8 @@ export default {
   font-size: 16px;
 }
 .nav_item {
-  margin-right: 25%;
-  margin-left: 25%; 
-  width: scan(100%-100px);
+  margin-right: 15%;
+  margin-left: 15%; 
   display: flex;
   justify-content: space-between;
 }
@@ -134,11 +118,17 @@ export default {
     cursor: pointer;
     background-color: rgb(174, 212, 112);
 }
-.container {
-    /* position: relative; */
-    height: 100%;
+.height100 {
+  height: 100%;
 }
 .route-content-item {
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.over {
+  overflow: hidden;
+}
+.posR {
+  display: absolute;
 }
 </style>
