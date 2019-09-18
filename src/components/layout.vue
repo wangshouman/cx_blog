@@ -1,6 +1,7 @@
 <template>
-    <div class="container">
+    <div class="height100">
         <h2>
+<<<<<<< HEAD
             <div class="header">
                 <div>
                     <div class="blog_name"><span>Morning city</span></div>
@@ -18,24 +19,25 @@
                     </div>
                 </div>
             </div>
+=======
+          <router-view name="author" class="posR"></router-view>
+>>>>>>> b3f51ca0af54c834ccef2d9b05e3c3c1abc9cbe1
         </h2>
-        <h2 class="container">
-            <div class="route-content-item">
-                <keep-alive>
-                    <router-view></router-view>
-                </keep-alive>
-            </div>
+        <h2 class="over">
+            <!-- <div class="route-content-item">  
+                  <router-view></router-view>
+            </div> -->
         </h2>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'layout',
   data () {
     return {
       msg: '程序员的自我修养',
-      color: '111'
+      color: ''
     }
   },
   mounted(){
@@ -102,6 +104,9 @@ export default {
 .instroduce {
   display: inline-block;
 }
+.index-item {
+  overflow-y: hidden;
+}
 .instroduce > span:hover {
   transform: translateY(-10px) rotate(10deg) scale(2);
 }
@@ -118,9 +123,8 @@ export default {
   font-size: 16px;
 }
 .nav_item {
-  margin-right: 25%;
-  margin-left: 25%; 
-  width: scan(100%-100px);
+  margin-right: 15%;
+  margin-left: 15%; 
   display: flex;
   justify-content: space-between;
 }
@@ -134,11 +138,17 @@ export default {
     cursor: pointer;
     background-color: rgb(174, 212, 112);
 }
-.container {
-    /* position: relative; */
-    height: 100%;
+.height100 {
+  height: 100%;
 }
 .route-content-item {
-    height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.over {
+  overflow: hidden;
+}
+.posR {
+  display: absolute;
 }
 </style>
