@@ -12,8 +12,8 @@
                     <div class="nav_item">
                         <span @click="jumpDetail(type='index')" :class="color == 'index'?'bgColor': ''">首页</span>
                         <span @click="jumpDetail(type='detail')" :class="color == 'detail'?'bgColor': ''">资讯</span>
-                        <span @click="jumpDetail(type='technical')" :class="color == 'technical'?'bgColor': ''">技术杂谈</span>
-                        <span @click="jumpDetail(type='talk')" :class="color == 'talk'?'bgColor': ''">技术交流</span>
+                        <span @click="jumpDetail(type='technical')" :class="color == 'technical'?'bgColor': ''">杂谈</span>
+                        <span @click="jumpDetail(type='talk')" :class="color == 'talk'?'bgColor': ''">交流</span>
                         <span @click="jumpDetail(type='myself')" :class="color == 'myself'?'bgColor': ''">关于自己</span>
                     </div>
                 </div>

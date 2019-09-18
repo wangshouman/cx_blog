@@ -7,11 +7,11 @@ import talk from '@/views/talk/talk'
 import myself from '@/views/myself/myself'
 
 // import detail from '@/views/detail'
-
 Vue.use(Router)
 export default new Router({
     mode: 'history',
-    routes: [{
+    routes: [
+        {
             path: '/',
             name: 'index',
             component: index
