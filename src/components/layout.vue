@@ -1,7 +1,6 @@
 <template>
     <div class="height100">
         <h2>
-<<<<<<< HEAD
             <div class="header">
                 <div>
                     <div class="blog_name"><span>Morning city</span></div>
@@ -19,9 +18,6 @@
                     </div>
                 </div>
             </div>
-=======
-          <router-view name="author" class="posR"></router-view>
->>>>>>> b3f51ca0af54c834ccef2d9b05e3c3c1abc9cbe1
         </h2>
         <h2 class="over">
             <!-- <div class="route-content-item">  
